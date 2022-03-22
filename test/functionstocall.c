@@ -2,43 +2,33 @@
 
 /**
  * print_c - function that prints characters.
- * @args: argument list.
- * Return: (1) a character.
+ * @c: argument of list.
+ * Return: (1) to stdinpt.
  */
 
-int print_c(va_list args)
+int print_c(va_list c)
 {
-	letsprint(va_arg(args, int));
+	char ch = (char)va_arg(c, int);
+
+	letsprint(ch);
 	return (1);
 }
 
 /**
  * print_s - function that prints a string.
- * @args: argument list.
+ * @s: argument of list.
  * Return: a.
  */
 
-int print_s(va_list args)
+int print_s(va_list s)
 {
 	int a;
-	char *ps = va_arg(args, char *);
+	char *ps = va_arg(s, char *);
 
 	if (ps == NULL)
-		return (NULL);
+		ps = "(null)";
 
 	for (a = 0; ps[a]; a++)
 		letsprint (ps[a]);
 	return (a);
-}
-
-/**
- * print_pctg - function that prints percentage.
- * @args: argument list.
- * Return: (1) a character.
- */
-
-int print_pctg(va_list args)
-{
-	letsprint('%');
-	return (1);
 }
