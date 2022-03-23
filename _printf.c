@@ -12,8 +12,11 @@ int (*get_conversion(const char *format))(va_list)
 	op_t conv[] = {
 		{"c", print_c},
 		{"s", print_s},
+<<<<<<< HEAD
 		{"d", print_d},
 		{"i", print_d},
+=======
+>>>>>>> 83fd30751e5bd48acab8f2c95a2d47843683dd41
 		{NULL, NULL}
 	};
 
@@ -51,25 +54,30 @@ int _printf(const char *format, ...)
 		for (; format[b] != '%' && format[b]; b++)
 		{
 			letsprint(format[b]);
-			c++;
+			c++; /**contador que guarda las veces que imprime para sacar la longitud.*/
 		}
 		if (!format[b])
 			return (c);
 		f = get_conversion(&format[b + 1]);
-		if (f != NULL)
+		/**inicializamos el puntero a función que llama al formato*/
+		/**e iterando en lo que se le pase, b es una posición y 1 otra*/
+		if (f != NULL) /**si get tiene contenido*/
 		{
-			c += f(args);
-			b += 2;
-			continue;
+			c += f(args); /**al contador se le pasan los argumentos*/
+			b += 2; /**salta b + 1*/
+			continue; /**sale del if y sigue validando condiciones*/
 		}
 		if (!format[b + 1])
 			return (-1);
 		letsprint(format[b]);
 		c++;
 		if (format[b + 1] == '%')
+			/**por default toma el caracter especial (secretos de printf)*/
 			b += 2;
+		/**se salta las dos posiciones de los %%*/
 		else
 			b++;
+		/**else a los %%, solo se salta la posición de b(%) y valida b + 1.*/
 	}
 	va_end(args);
 	return (c);
