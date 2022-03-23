@@ -12,8 +12,6 @@ int (*get_conversion(const char *format))(va_list)
 	op_t conv[] = {
 		{"c", print_c},
 		{"s", print_s},
-		{"d", print_d},
-		{"i", print_i},
 		{NULL, NULL}
 	};
 
@@ -38,7 +36,7 @@ int (*get_conversion(const char *format))(va_list)
 
 int _printf(const char *format, ...)
 {
-	int b = 0; 
+	int b = 0;
 	int c = 0;
 	va_list args;
 	int (*f)(va_list);
@@ -55,22 +53,26 @@ int _printf(const char *format, ...)
 		}
 		if (!format[b])
 			return (c);
-		f = get_conversion(&format[b + 1]); 
-		/**inicializamos el puntero a función que llama al formato e iterando en lo que se le pase, b es una posició y 1 otra */
+		f = get_conversion(&format[b + 1]);
+		/**inicializamos el puntero a función que llama al formato*/
+		/**e iterando en lo que se le pase, b es una posición y 1 otra*/
 		if (f != NULL) /**si get tiene contenido*/
 		{
 			c += f(args); /**al contador se le pasan los argumentos*/
 			b += 2; /**salta b + 1*/
 			continue; /**sale del if y sigue validando condiciones*/
 		}
-		if (!format[b + 1]) 
+		if (!format[b + 1])
 			return (-1);
 		letsprint(format[b]);
 		c++;
-		if (format[b + 1] == '%') /**por default toma el caracter especial (secretos de printf)*/
-			b += 2; /**se salta las dos posiciones de los %%*/
+		if (format[b + 1] == '%')
+			/**por default toma el caracter especial (secretos de printf)*/
+			b += 2;
+		/**se salta las dos posiciones de los %%*/
 		else
-			b++; /**de lo contrario a los %%, solo se salta la posición de b(%) y valida b + 1.*/
+			b++;
+		/**else a los %%, solo se salta la posición de b(%) y valida b + 1.*/
 	}
 	va_end(args);
 	return (c);
