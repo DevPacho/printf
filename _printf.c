@@ -36,7 +36,7 @@ int (*get_conversion(const char *format))(va_list)
 
 int _printf(const char *format, ...)
 {
-	int b = 0;
+	int b = 0; 
 	int c = 0;
 	va_list args;
 	int (*f)(va_list);
@@ -49,25 +49,26 @@ int _printf(const char *format, ...)
 		for (; format[b] != '%' && format[b]; b++)
 		{
 			letsprint(format[b]);
-			c++;
+			c++; /**contador que guarda las veces que imprime para sacar la longitud.*/
 		}
 		if (!format[b])
 			return (c);
-		f = get_conversion(&format[b + 1]);
-		if (f != NULL)
+		f = get_conversion(&format[b + 1]); 
+		/**inicializamos el puntero a función que llama al formato e iterando en lo que se le pase, b es una posició y 1 otra */
+		if (f != NULL) /**si get tiene contenido*/
 		{
-			c += f(args);
-			b += 2;
-			continue;
+			c += f(args); /**al contador se le pasan los argumentos*/
+			b += 2; /**salta b + 1*/
+			continue; /**sale del if y sigue validando condiciones*/
 		}
-		if (!format[b + 1])
+		if (!format[b + 1]) 
 			return (-1);
 		letsprint(format[b]);
 		c++;
-		if (format[b + 1] == '%')
-			b += 2;
+		if (format[b + 1] == '%') /**por default toma el caracter especial (secretos de printf)*/
+			b += 2; /**se salta las dos posiciones de los %%*/
 		else
-			b++;
+			b++; /**de lo contrario a los %%, solo se salta la posición de b(%) y valida b + 1.*/
 	}
 	va_end(args);
 	return (c);
