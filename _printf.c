@@ -12,11 +12,8 @@ int (*get_conversion(const char *format))(va_list)
 	op_t conv[] = {
 		{"c", print_c},
 		{"s", print_s},
-<<<<<<< HEAD
 		{"d", print_d},
 		{"i", print_d},
-=======
->>>>>>> 83fd30751e5bd48acab8f2c95a2d47843683dd41
 		{NULL, NULL}
 	};
 
