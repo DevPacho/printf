@@ -60,7 +60,7 @@ int _printf(const char *format, ...)
 		{
 			c += f(args); /**al contador se le pasan los argumentos*/
 			b += 2; /**salta b + 1*/
-			continue; /**sale del if y sigue validando condiciones*/
+			continue; /**sale del if (va al while) y vuelve a validar más condiciones*/
 		}
 		if (!format[b + 1])
 			return (-1);
@@ -69,10 +69,10 @@ int _printf(const char *format, ...)
 		if (format[b + 1] == '%')
 			/**por default toma el caracter especial (secretos de printf)*/
 			b += 2;
-		/**se salta las dos posiciones de los %%*/
+		/**se salta las dos posiciones de los %% y pasa a lo siguiente*/
 		else
 			b++;
-		/**else a los %%, solo se salta la posición de b(%) y valida b + 1.*/
+		/**else a los %%, solo se salta la posición de b(%) y valida b + 1,(c)(s)*/
 	}
 	va_end(args);
 	return (c);
