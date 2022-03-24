@@ -70,6 +70,8 @@ int print_d(va_list d)
 		revertir /= 10;
 	}
 	size_t += letsprint(u_numero);
+	if (i == 0)
+		i++;
 	if (p_numero == (g_numero / i))
 	{
 		for (a = 0; a <= i - 2; a++)
