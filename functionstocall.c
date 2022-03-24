@@ -8,7 +8,7 @@
 
 int print_c(va_list c)
 {
-	char ch = (char)va_arg(c, int);
+	char ch = va_arg(c, int);
 
 	letsprint(ch);
 	return (1);
@@ -34,6 +34,21 @@ int print_s(va_list s)
 }
 
 /**
+ * _rec - recursing function for zeros.
+ * @num: number.
+ * @rec: makes the recursion.
+ * Return: <= 0 return 1, else return recursion.
+ */
+
+int _rec(int num, int rec)
+{
+	if (rec <= 0)
+		return (1);
+	else
+		return (num * _rec(num, rec - 1));
+}
+
+/**
  * print_d - function that prints integer.
  * @d: argument of list.
  * Return: a integer.
@@ -41,13 +56,13 @@ int print_s(va_list s)
 int print_d(va_list d)
 {
 	int n = va_arg(d, int);
-	int i = 0, a = 0, size_t = 0;/* variables a recorrer*/
+	int i = 0, b = 0, a = 0, total = 0;/* variables a recorrer*/
 	int p_numero = 0, u_numero = 0, revertir = 0, g_numero = 0;
 
 	g_numero = n;/* Guardar numeros*/
 	if (n < 0)
 	{
-		size_t += letsprint('-');
+		total += letsprint('-');
 		u_numero = ('0' - (n % 10));
 		n /= -10;
 	}
@@ -65,17 +80,16 @@ int print_d(va_list d)
 	}
 	for (; revertir > 0;)
 	{
-		n = ((revertir % 10) + '0');
-		size_t += letsprint(n);
+		b = ((revertir % 10) + '0');
+		total += letsprint(b);
 		revertir /= 10;
 	}
-	size_t += letsprint(u_numero);
-	if (i == 0)
-		i++;
-	if (p_numero == (g_numero / i))
+	total += letsprint(u_numero);
+
+	if (p_numero == (g_numero / _rec(10, i)))
 	{
 		for (a = 0; a <= i - 2; a++)
-			size_t += letsprint('0');
+		total += letsprint('0');
 	}
-	return (size_t);
+	return (total);
 }
