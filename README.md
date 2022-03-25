@@ -112,3 +112,6 @@
 <br>
 <h2>2. Just because it&apos;s in print doesn&apos;t mean it&apos;s the gospel</h2>
 <p>Create a man page for your function.&nbsp;</p>
+
+[![1900x920-8-beneficios-de-usar-imagenes-en-nuestros-sitios-web.jpg](https://i.postimg.cc/qByb9Tgz/1900x920-8-beneficios-de-usar-imagenes-en-nuestros-sitios-web.jpg)](https://postimg.cc/pyVJF3fH)
+
