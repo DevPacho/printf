@@ -73,11 +73,6 @@
     <li>Our main files will include your main header file (<code>main.h</code>):&nbsp;<code>#include main.h</code></li>
     <li>You might want to look at the gcc flag&nbsp;<code>-Wno-format</code> when testing with your&nbsp;<code>_printf</code> and the standard&nbsp;<code>printf</code>. Example of test file that you could use:</li>
 </ul>
-<h1>¡Main.c content is missing!</h1>
-<ul>
-    <li>We strongly encourage you to work all together on a set of tests</li>
-    <li>If the task does not specify what to do with an edge case, do the same as&nbsp;<code>printf</code></li>
-</ul>
 <br>
 <h1>Tasks</h1>
 <h2>0. I&apos;m not going anywhere. You can print that wherever you want to. I&apos;m here and I&apos;m a Spur for life</h2>
