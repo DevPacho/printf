@@ -9,6 +9,9 @@
 <h2>Example:</h2>
 <h3>_printf("%s, %s %d %d\n", "Friday", "March", 25, 2022);</h3>
 <br>
+    
+[![Printf-flowchart-David-Perlaza-Francisco-Ram-rez-page-0001.jpg](https://i.postimg.cc/GhQJKBpt/Printf-flowchart-David-Perlaza-Francisco-Ram-rez-page-0001.jpg)](https://postimg.cc/mtPH2gCW)
+    
 <h2>Concepts</h2>
 <div>
     <div>
