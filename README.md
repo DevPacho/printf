@@ -1,4 +1,14 @@
-<h1>0x11. C - printf</h1>
+<h1>Print me everything that happens!</h1>
+<p>The printf function is responsible for generating a data output depending on a specific format.</p>
+<h2>This function includes the following formats:</h2>
+<h3>%d -- print a decimal (base 10) number.</h3>
+<h3>%i -- print an integer in base 10.<h3>
+<h3>%c -- print a single character.</h3>
+<h3>%s -- print a string of characters.</h3>
+<br>
+<h2>Example:</h2>
+<h3>_printf("%s, %s %d %d\n", "Friday", "March", 25, 2022);</h3>
+<br>
 <h2>Concepts</h2>
 <div>
     <div>
