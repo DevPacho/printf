@@ -45,7 +45,7 @@ To print a date and time under the form of "Wednesday, MARCH 09, 03, 22", where 
 .PP
 #include "main.h"
 
-_printf("%s, %s %d, %d\\n", "Wednesday", "March",03, 23, 22);
+_printf("%s, %s %d %d\n", "Friday", "March", 25, 2022);
 
 .SH BUGS
 No knows bugs.
