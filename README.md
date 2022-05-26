@@ -1,17 +1,29 @@
 <h1>Print me everything that happens!</h1>
-<p>The printf function is responsible for generating a data output depending on a specific format.</p>
-<h2>This function includes the following formats:</h2>
-<h3>%d -- print a decimal (base 10) number.</h3>
-<h3>%i -- print an integer in base 10.<h3>
-<h3>%c -- print a single character.</h3>
-<h3>%s -- print a string of characters.</h3>
+
+![image](https://user-images.githubusercontent.com/98773774/170404477-d7babf89-fd3d-40ea-8db2-c46771ac98de.png)
+<p>©. <a href="https://www.log2base2.com/C/basic/printing-value-of-a-variable.html" target="_blank"><i><b>Image source</a></i></b></p>
 <br>
-<h2>Example:</h2>
-<h3>_printf("%s, %s %d %d\n", "Friday", "March", 25, 2022);</h3>
+<h2>How it works? 🤔</h2>
+<p>The <code>printf</code> function is responsible for generating a data output depending on a specific format. In this project, <b></b><code><i><b><a href="https://github.com/davidperlaza14" target="_blank">David Perlaza</b></i></a></code> and I will create our own printing function in the C programming language! (<code>_printf</code>) 😉</p>
 <br>
-    
-[![Printf-flowchart-David-Perlaza-Francisco-Ram-rez-page-0001.jpg](https://i.postimg.cc/GhQJKBpt/Printf-flowchart-David-Perlaza-Francisco-Ram-rez-page-0001.jpg)](https://postimg.cc/mtPH2gCW)
-    
+<h2>Identifiers 🎯</h2>
+<p>This function includes the following formats:</p>
+<ul>
+    <li><code>%d</code> - prints a decimal (base 10) number.</li>
+    <li><code>%i</code> -- prints an integer in base 10.</li>
+    <li><code>%c</code> -- prints a character.</li>
+    <li><code>%s</code> -- prints a string of characters.</li>
+</ul>
+<br>
+<h2>Example of use 🔍️</h2>
+<p><code>_printf("%s, %s %d %d\n", "Friday", "March", 25, 2022);</code></p>
+<br>
+<h2>Flowchart 📊</h2>
+
+![image](https://user-images.githubusercontent.com/98773774/170408690-8fc20b48-a105-4900-bad1-f72ae7352d72.png)
+
+<br>
+<h1>Detailed project description 📑</h1>
 <h2>Concepts</h2>
 <div>
     <div>
@@ -61,9 +73,7 @@
     <li>All your header files should be include guarded</li>
     <li>Note that we will not provide the&nbsp;<code>_putchar</code> function for this project</li>
 </ul>
-<h3>GitHub</h3>
-<p><strong>There should be one project repository per group. If you clone/fork/whatever a project repository with the same name before the second deadline, you risk a 0% score.</strong></p>
-<p><br></p>
+<br>
 <h2>More Info</h2>
 <h3>Authorized functions and macros</h3>
 <ul>
@@ -87,7 +97,9 @@
     <li>You might want to look at the gcc flag&nbsp;<code>-Wno-format</code> when testing with your&nbsp;<code>_printf</code> and the standard&nbsp;<code>printf</code>. Example of test file that you could use:</li>
 </ul>
 <br>
-<h1>Tasks</h1>
+<h1>✅ Tasks ✅</h1>
+<p>This project is made up of mandatory tasks, <b>⬇️ <code>look at them!</code></b> ⬇️</p>
+<br>
 <h2>0. I&apos;m not going anywhere. You can print that wherever you want to. I&apos;m here and I&apos;m a Spur for life</h2>
 <p>Write a function that produces output according to a format.</p>
 <ul>
@@ -106,6 +118,10 @@
     <li>You don&rsquo;t have to handle precision</li>
     <li>You don&rsquo;t have to handle the length modifiers</li>
 </ul>
+<h3><i><b>Solution files:</b></i></h3>
+<ul>
+    <li><b>_printf function (main): </b><code><i><b><a href="https://github.com/DevPacho/printf/blob/main/_printf.c" target="_blank">_printf.c</b></i></a></code> , <b>Identifiers: </b><code><i><b><a href="https://github.com/DevPacho/printf/blob/main/functionstocall.c" target="_blank">functionstocall.c</b></i></a></code> ✅</li>
+</ul>
 <br>
 <h2>1. Education is when you read the fine print. Experience is what you get if you don&apos;t</h2>
 <p>Handle the following conversion specifiers:</p>
@@ -117,6 +133,26 @@
     <li>You don&rsquo;t have to handle precision</li>
     <li>You don&rsquo;t have to handle the length modifiers</li>
 </ul>
+<h3><i><b>Solution files:</b></i></h3>
+<ul>
+    <li><b>_printf function (main): </b><code><i><b><a href="https://github.com/DevPacho/printf/blob/main/_printf.c" target="_blank">_printf.c</b></i></a></code> , <b>Identifiers: </b><code><i><b><a href="https://github.com/DevPacho/printf/blob/main/functionstocall.c" target="_blank">functionstocall.c</b></i></a></code> ✅</li>
+</ul>
 <br>
 <h2>2. Just because it&apos;s in print doesn&apos;t mean it&apos;s the gospel</h2>
 <p>Create a man page for your function.&nbsp;</p>
+<ul>
+    <li><b>Solution file: </b><code><i><b><a href="https://github.com/DevPacho/printf/blob/main/man_3_printf" target="_blank">man_3_printf</b></i></a></code> ✅</li>
+</ul>
+<br>
+<h2>Authors 👨‍💻</h2>
+<ul dir="auto">
+    <li>
+        <p dir="auto"><i><b>Francisco Ramírez</b></i> |&nbsp;<a href="https://twitter.com/FranciscoR_15"> Twitter</a> |&nbsp;<a href="https://github.com/DevPacho" rel="nofollow"> GitHub</a></p>
+    </li>
+    <li>
+        <p dir="auto"><i><b>David Perlaza</b></i> |&nbsp;<a href="https://twitter.com/Perlazadavid14">Twitter</a> |&nbsp;<a href="https://github.com/davidperlaza14" rel="nofollow">GitHub</a></p>
+    </li>
+</ul>
+<br>
+<h2>License & Copyright</h2>
+<i>©. Project provided by: <a href="https://www.holbertonschool.com/" target="_blank"><b>Holberton School</a></i></b>
